@@ -2,10 +2,13 @@
 $(function(){
 	console.log("Documentation is ready!!");
 
+	var clickSound = new Audio("SFX/click.mp3");
+
 	$(".back").hide();
 
 	// when the "money_button" get clicked..
 	$(".money_button").on("click", function() {
+		clickSound.play();
 		// declares a variable named "money"
 		var money;
 		// declares a variable named "moneyPerClick"
@@ -20,6 +23,7 @@ $(function(){
 	})
 
 	$(".upgrade").on("click", function() {
+		clickSound.play();
 		// hiding all elements besides stats on screen.
 		$(".upgrade").hide();
 		$(".money_button").hide();
@@ -27,6 +31,7 @@ $(function(){
 	})
 
 	$(".back").on("click", function() {
+		clickSound.play();
 		$(".back").hide();
 		$(".money_button").show();
 		$(".upgrade").show();
