@@ -25,6 +25,16 @@ body {
 	height:13%;
 }
 
+.upgrade1 {
+	background-color:#3366FF;
+	width:30%;
+	height:20%;
+	text-align:center;
+	position:absolute;
+	left:10%;
+	bottom:45%;
+}
+
 .back {
 	border-bottom-right-radius: 15px;
 	text-align:center;
