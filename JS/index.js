@@ -37,8 +37,8 @@ $(function(){
 	})
 
 	$(".upgrade1").on("click", function() {
-		if (money >= 1000) {
-			var cost = parseInt($(".price").text());
+		var cost = parseInt($(".price").text());
+		if (money >= cost) {
 			clickSound.play();
 			money -= cost;
 			moneyPerClick ++;
@@ -47,6 +47,11 @@ $(function(){
 			$(".value").text(money);
 			$(".perClick").text(moneyPerClick);
 			$(".price").text(cost);
+
+			// visuals
+
+			$(".upgrade1").css("background-color", "#FF1a1a");
+			setTimeout(function(){$(".upgrade1").css("background-color", "#3366FF")}, 500);
 		}
 	})
 })

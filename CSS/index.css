@@ -2,6 +2,17 @@ body {
 	background-image:url("../IMG/MONEY.JPEG");
 }
 
+.music {
+	background-color:#666666;
+	width:20%;
+	height:7%;
+	position:relative;
+	left:40%;
+	bottom:1%;
+	text-align:center;
+	overflow:auto;
+}
+
 .stats {
 	position:absolute;
 	background-color:#0033CC;
@@ -13,6 +24,7 @@ body {
 	width:20%;
 	height:13%;
 	left:40%;
+	overflow:auto;
 }
 
 .upgrade {
@@ -23,6 +35,7 @@ body {
 	text-align:center;
 	width:20%;
 	height:13%;
+	overflow:auto;
 }
 
 .upgrade1 {
@@ -33,6 +46,7 @@ body {
 	position:absolute;
 	left:10%;
 	bottom:45%;
+	overflow:auto;
 }
 
 .back {
@@ -41,6 +55,7 @@ body {
 	background-color:#FF6666;
 	width:10%;
 	height:20%;
+	overflow:auto;
 }
 
 .money_button {
@@ -52,4 +67,5 @@ body {
 	background-color:#3366CC;
 	left:35%;
 	bottom:10%;
+	overflow:auto;
 }
