@@ -3,6 +3,14 @@ $(function(){
 	console.log("Documentation is ready3!!");
 
 	var clickSound = new Audio("SFX/click.mp3");
+	var musicSound = new Audio("SFX/Jumbo_song.wav");
+
+	var musicEnabled = false;
+
+	while (musicEnabled = true) {
+		musicSound.play();
+	}
+
 	var money = 0;
 	var moneyPerClick = 1;
 	$(".back").hide();
@@ -52,6 +60,17 @@ $(function(){
 
 			$(".upgrade1").css("background-color", "#FF1a1a");
 			setTimeout(function(){$(".upgrade1").css("background-color", "#3366FF")}, 500);
+		}
+	})
+
+	$(".music").on("click", function() {
+		if ($(".music").css("background-color") == "rgb(102, 102, 102)") {
+			$(".music").css("background-color", "#FF6600");
+			musicEnabled = true;
+		}
+		if ($(".music").css("background-color") == "rgb(255, 102, 0)") {
+			$(".music").css("background-color", "#666666");
+			musicEnabled = false;
 		}
 	})
 })
