@@ -3,7 +3,7 @@ $(function(){
 	console.log("Documentation is ready3!!");
 
 	var clickSound = new Audio("SFX/click.mp3");
-	var money = 1000;
+	var money = 0;
 	var moneyPerClick = 1;
 	$(".back").hide();
 	$(".upgrade1").hide();
@@ -38,12 +38,15 @@ $(function(){
 
 	$(".upgrade1").on("click", function() {
 		if (money >= 1000) {
+			var cost = parseInt($(".price").text());
 			clickSound.play();
-			money -= 1000;
+			money -= cost;
 			moneyPerClick ++;
+			cost += 500
 
 			$(".value").text(money);
 			$(".perClick").text(moneyPerClick);
+			$(".price").text(cost);
 		}
 	})
 })
