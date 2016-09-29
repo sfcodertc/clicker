@@ -1,18 +1,14 @@
 // I don't like writing comments a lot of times.
 $(function(){
-	console.log("Documentation is ready3!!");
+	console.log("Documentation is ready!!");
 
 	var clickSound = new Audio("SFX/click.mp3");
 	var musicSound = new Audio("SFX/Jumbo_song.wav");
 
-	var musicEnabled = false;
-
-	while (musicEnabled = true) {
-		musicSound.play();
-	}
-
+	var musicColor = false;
 	var money = 0;
 	var moneyPerClick = 1;
+
 	$(".back").hide();
 	$(".upgrade1").hide();
 	// when the "money_button" get clicked..
@@ -64,13 +60,18 @@ $(function(){
 	})
 
 	$(".music").on("click", function() {
-		if ($(".music").css("background-color") == "rgb(102, 102, 102)") {
+		if (musicColor == false) {
+			musicColor = true;
 			$(".music").css("background-color", "#FF6600");
-			musicEnabled = true;
+			musicSound.play();
 		}
-		if ($(".music").css("background-color") == "rgb(255, 102, 0)") {
+		else {
+			musicColor = false;
 			$(".music").css("background-color", "#666666");
-			musicEnabled = false;
+			musicSound.stop();
 		}
 	})
 })
+
+//"rgb(255, 102, 0)"
+
