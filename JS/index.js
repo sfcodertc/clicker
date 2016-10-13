@@ -3,7 +3,14 @@ $(function(){
 	console.log("Documentation is ready!!");
 
 	var clickSound = new Audio("SFX/click.mp3");
-	var musicSound = new Audio("SFX/Jumbo_song.wav");
+	var musicSound = new Audio("SFX/Jumbo_song.mp3");
+
+	musicSound.loop = true;
+
+	musicSound.addEventListener('ended', function() {
+    	this.currentTime = 0;
+    	this.play();
+	}, false);
 
 	var musicColor = false;
 	var money = 0;
@@ -68,7 +75,7 @@ $(function(){
 		else {
 			musicColor = false;
 			$(".music").css("background-color", "#666666");
-			musicSound.stop();
+			musicSound.pause();
 		}
 	})
 })
