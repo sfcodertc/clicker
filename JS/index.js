@@ -4,7 +4,7 @@ $(function(){
 
 	var clickSound = new Audio("SFX/click.mp3");
 	//var musicSound = new Audio("SFX/Jumbo_song.mp3");
-	var musicSound = new Audio("SFX/SpongBDE.wav");
+	var musicSound = new Audio("SFX/music.mp3");
 
 	musicSound.loop = true;
 
@@ -17,8 +17,18 @@ $(function(){
 	var money = 0;
 	var moneyPerClick = 1;
 
+	$(".music").hide();
+	$(".upgrade").hide();
+	$(".money_button").hide();
 	$(".back").hide();
 	$(".upgrade1").hide();
+
+	// animations
+
+	$(".money_button").delay(1000).fadeIn(2000, "swing");
+	$(".upgrade").delay(3000).fadeIn(2000, "swing");
+	$(".music").delay(5000).fadeIn(2000, "swing");
+
 	// when the "money_button" get clicked..
 	$(".money_button").on("click", function() {
 		clickSound.play();
